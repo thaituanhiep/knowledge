@@ -1,0 +1,72 @@
+site_name: My Docs
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    # - navigation.sections
+    # - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+  icon:
+    repo: fontawesome/brands/github
+    logo: fontawesome/solid/house-chimney
+  favicon: assets/images/favicon.webp
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/fenixpapu
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/phoenixpapu
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/fenixpapu/
+  # generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+plugins:
+  - blog:
+      authors: true
+      blog_toc: true
+      post_date_format: medium
+      archive: true
+      pagination: true
+      pagination_per_page: 5
+      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+  - search:
+
+repo_url: https://github.com/thaituanhiep/knowledge
+repo_name: knowledge
